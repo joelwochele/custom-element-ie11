@@ -1,11 +1,11 @@
-#Minimal example of working custom element
+# Minimal example of working custom element
 
 ## Working in
 - Chrome
 - Firefox
 - IE11 (except output binding!)
 
-##Reproduce results
+## Reproduce results
 
 1. `npm install`
 2. Build Angular Element  
