@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Button Test Page</title>
+  <script type="text/javascript" src="btn-element.js"></script>
+</head>
+
+<body>
+<app-btn label="First Value"></app-btn>
+<div id="output"></div>
+
+<script>
+    var button = document.querySelector('app-btn');
+    console.log(button);
+    if (button) {
+        button.addEventListener('myaction', function (event) {
+            console.log('action emitted: ' + event.detail);
+            document.getElementById('output').innerHTML = event.detail;
+        });
+        setTimeout(function () {
+            button.label = 'Async value change happened :)'
+        }, 2000);
+    }
+</script>
+</body>
+</html>
